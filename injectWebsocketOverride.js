@@ -1,6 +1,6 @@
 console.log("BF4 Battlescreen Fix")
 
-function injectWebSocketOverride() {
+const injectWebSocketOverride = () => {
     const originalWebSocket = window.WebSocket;
   
     // Define the URLs that should bypass the extension's WebSocket override
@@ -37,23 +37,23 @@ function injectWebSocketOverride() {
         onclose: null,
         onerror: null,
   
-        send: function(data) {
+        send: (data) => {
           window.postMessage({ action: 'send', data: data, socketId: socketId }, '*');
         },
   
-        close: function() {
+        close: () => {
           window.postMessage({ action: 'close', socketId: socketId }, '*');
         },
   
         // Support addEventListener for WebSocket events
-        addEventListener: function(event, callback) {
+        addEventListener: (event, callback) => {
           if (eventListeners[event]) {
             eventListeners[event].push(callback);
           }
         },
   
         // Support removeEventListener for WebSocket events
-        removeEventListener: function(event, callback) {
+        removeEventListener: (event, callback) => {
           if (eventListeners[event]) {
             const index = eventListeners[event].indexOf(callback);
             if (index > -1) {
@@ -63,10 +63,10 @@ function injectWebSocketOverride() {
         },
   
         // Dispatch events and call event listeners
-        _dispatchEvent: function(event, data) {
+        _dispatchEvent: (event, data) => {
           // Call the event listeners registered via addEventListener
           if (eventListeners[event]) {
-            eventListeners[event].forEach(function(callback) {
+            eventListeners[event].forEach((callback) => {
               callback(data);
             });
           }
@@ -80,7 +80,7 @@ function injectWebSocketOverride() {
       };
   
       // Listen for messages from the content script and dispatch events
-      window.addEventListener('message', function(event) {
+      window.addEventListener('message', (event) => {
         if (event.data.socketId === socketId) {
           if (event.data.action === 'open') {
             ws._dispatchEvent('open');

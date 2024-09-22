@@ -1,5 +1,5 @@
 // Listen for messages from the page script
-window.addEventListener('message', function(event) {
+window.addEventListener('message', (event) => {
     if (event.source !== window) {
       return; // Ignore messages not from the same window
     }
@@ -9,7 +9,7 @@ window.addEventListener('message', function(event) {
       port.postMessage({ action: 'open', url: event.data.url, protocols: event.data.protocols, socketId: event.data.socketId });
   
       // Relay messages between the background script and the page
-      port.onMessage.addListener(function(msg) {
+      port.onMessage.addListener((msg) => {
         window.postMessage({ action: msg.action, data: msg.data, socketId: msg.socketId }, '*');
       });
     } else if (event.data.action === 'send') {

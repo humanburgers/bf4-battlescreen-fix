@@ -1,25 +1,25 @@
 let sockets = {};
 
-browser.runtime.onConnect.addListener(function(port) {
+browser.runtime.onConnect.addListener((port) => {
   if (port.name === "websocket-relay") {
-    port.onMessage.addListener(function(msg) {
+    port.onMessage.addListener((msg) => {
       if (msg.action === 'open') {
         const socket = new WebSocket(msg.url, msg.protocols || []);
         sockets[msg.socketId] = socket;
 
-        socket.onopen = function() {
+        socket.onopen = () => {
           port.postMessage({ action: 'open', socketId: msg.socketId });
         };
 
-        socket.onmessage = function(event) {
+        socket.onmessage = (event) => {
           port.postMessage({ action: 'message', data: event.data, socketId: msg.socketId });
         };
 
-        socket.onerror = function() {
+        socket.onerror = () => {
           port.postMessage({ action: 'error', socketId: msg.socketId });
         };
 
-        socket.onclose = function() {
+        socket.onclose = () => {
           port.postMessage({ action: 'close', socketId: msg.socketId });
           delete sockets[msg.socketId];
         };
