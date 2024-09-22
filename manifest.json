@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "BF4 Battlescreen Fix",
+    "version": "1.0",
+
+    "description": "Fixes the Battlescreen on Battlelog to make it functional again.",
+
+    "content_scripts": [
+        {
+            "matches": ["https://battlelog.battlefield.com/*"],
+            "js": ["injectWebsocketOverride.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://battlelog.battlefield.com/*"],
+            "js": ["relayMessages.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false,
+        "type": "module"
+    }
+    
+}
