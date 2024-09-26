@@ -24,6 +24,11 @@
     ],
     "content_security_policy": {
         "extension_pages": "script-src 'self'; connect-src 'self' ws: wss:; object-src 'none';"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{5e43356b-3065-4414-ad87-5d0ab50c660e}"
+        }
     }
     
 }
