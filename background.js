@@ -1,3 +1,7 @@
+if (typeof browser === 'undefined') {
+  importScripts("browser-polyfill.min.js")
+}
+
 let sockets = {};
 
 browser.runtime.onConnect.addListener((port) => {
