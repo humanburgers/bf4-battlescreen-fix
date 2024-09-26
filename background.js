@@ -30,5 +30,9 @@ browser.runtime.onConnect.addListener((port) => {
         delete sockets[msg.socketId];
       }
     });
-  }
+  } else if (port.name === "keep-alive") {
+    port.onMessage.addListener((msg) => {
+      port.postMessage('pong')
+    })
+  } 
 });

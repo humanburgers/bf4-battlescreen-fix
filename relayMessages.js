@@ -1,3 +1,12 @@
+
+const keepAlivePort = browser.runtime.connect({ name:'keep-alive' })
+// Periodically send message to background script to prevent it from getting terminated
+setInterval(() => {
+  keepAlivePort.postMessage('ping')
+}, 1000)
+
+
+
 // Listen for messages from the page script
 window.addEventListener('message', (event) => {
     if (event.source !== window) {
