@@ -8,12 +8,7 @@
     "content_scripts": [
         {
             "matches": ["https://battlelog.battlefield.com/*"],
-            "js": ["injectWebsocketOverride.js"],
-            "run_at": "document_idle"
-        },
-        {
-            "matches": ["https://battlelog.battlefield.com/*"],
-            "js": ["relayMessages.js"],
+            "js": ["injectWebsocketOverride.js", "relayMessages.js"],
             "run_at": "document_idle"
         }
     ],
