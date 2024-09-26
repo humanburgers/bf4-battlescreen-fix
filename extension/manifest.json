@@ -29,6 +29,10 @@
         "gecko": {
             "id": "{5e43356b-3065-4414-ad87-5d0ab50c660e}"
         }
+    },
+    "icons": {
+        "128": "icons/icon128.png",
+        "48": "icons/icon48.png"
     }
     
 }
