@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "BF4 Battlescreen Fix",
     "version": "1.0",
 
@@ -19,8 +19,7 @@
     ],
     "background": {
         "scripts": ["background.js"],
-        "persistent": false,
-        "type": "module"
+        "service_worker": "background.js"
     }
     
 }
