@@ -20,6 +20,9 @@
     "background": {
         "scripts": ["background.js"],
         "service_worker": "background.js"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; connect-src 'self' ws: wss:; object-src 'none';"
     }
     
 }
