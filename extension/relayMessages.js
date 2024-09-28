@@ -1,3 +1,4 @@
+// Assign chrome namespace to browser for Chrome compatability
 if (typeof browser === 'undefined') {
   globalThis.browser = chrome
 }
