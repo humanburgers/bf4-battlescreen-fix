@@ -1,3 +1,6 @@
+if (typeof browser === 'undefined') {
+  globalThis.browser = chrome
+}
 
 const keepAlivePort = browser.runtime.connect({ name:'keep-alive' })
 // Periodically send message to background script to prevent it from getting terminated

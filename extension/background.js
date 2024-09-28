@@ -1,5 +1,5 @@
 if (typeof browser === 'undefined') {
-  importScripts("browser-polyfill.min.js")
+  globalThis.browser = chrome
 }
 
 let sockets = {};
