@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "BF4 BattleScreen Fix",
+    "name": "BF4 Battlescreen Fix",
     "version": "1.0.0",
 
-    "description": "Fixes the BattleScreen feature in Battlelog for Battlefield 4.",
+    "description": "Fixes the Battlescreen feature in Battlelog for Battlefield 4.",
 
     "content_scripts": [
         {
