@@ -5,6 +5,9 @@ Since the creation of the Battlescreen, updates in browser security have broken 
 and DICE/EA haven't fixed it. This extension uses a simple workaround to get Battlescreen working again while staying compliant with
 the latest browser security policies.
 
+### Demo Video
+[![Demo Video](https://i.ytimg.com/vi/8Z-hoLKrzKU/hqdefault.jpg)](https://www.youtube.com/watch?v=8Z-hoLKrzKU)
+
 ## Features
 
 - **No configuration required**: Just install the extension, press the Battlescreen button in Battlelog while in-game on Battlefield 4,
@@ -17,9 +20,10 @@ safe browser communication mechanisms to make sure it works in the latest browse
 
 ## Installation
 
-[Firefox Add-ons]() *coming soon*
+[Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/bf4-battlescreen-fix/)
 
-[Chrome Web Store]() *coming soon*
+[Chrome Web Store](https://chromewebstore.google.com/detail/bf4-battlescreen-fix/miaabdkkbcileinfnlpdjgjlfjdmkada)
+- Users of Edge, Opera, and other Chromium-based browsers can install the extension through the chrome web store
 
 ## Usage
 
@@ -29,4 +33,6 @@ safe browser communication mechanisms to make sure it works in the latest browse
 3. Click on the Battlescreen button in the blue bar at the bottom of the page.
 4. Play the game and use the Battlescreen on a second monitor to enhance your situational awareness
 
-**Note**: If the Battlescreen doesn't initially appear, try clicking the button again, or navigating to a different page in Battlelog then back to it. Because of the way the extension modifies the page, reloading it probably won't make it work.
+**Note**: 
+- Only fixes Battlescreen for PC
+- If the Battlescreen doesn't initially appear, try clicking the button again, or navigating to a different page in Battlelog then back to it. Because of the way the extension modifies the page, reloading it probably won't make it work.
