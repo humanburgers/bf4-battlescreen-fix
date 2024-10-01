@@ -6,7 +6,7 @@ and DICE/EA haven't fixed it. This extension uses a simple workaround to get Bat
 the latest browser security policies.
 
 ### Demo Video
-[![Demo Video](https://i.ytimg.com/vi/8Z-hoLKrzKU/hqdefault.jpg)](https://www.youtube.com/watch?v=8Z-hoLKrzKU)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8Z-hoLKrzKU?si=JxwUwdljSKIRz5Iu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Features
 
