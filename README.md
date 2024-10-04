@@ -34,5 +34,6 @@ safe browser communication mechanisms to make sure it works in the latest browse
 4. Play the game and use the Battlescreen on a second monitor to enhance your situational awareness
 
 **Note**: 
-- Only fixes Battlescreen for PC
+- Only confirmed to work for PC
+    - If someone can confirm that it works on consoles as well, let me know by creating an issue and I'll update the store pages to say it works for consoles also.
 - If the Battlescreen doesn't initially appear, try clicking the button again, or navigating to a different page in Battlelog then back to it. Because of the way the extension modifies the page, reloading it probably won't make it work.
